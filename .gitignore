@@ -1,0 +1,3 @@
+bin/*.o
+tests/my_tests_runner
+.DS_Store

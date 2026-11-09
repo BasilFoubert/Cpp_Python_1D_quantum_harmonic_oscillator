@@ -1,0 +1,111 @@
+\hypertarget{classGauss__Hermite}{}\doxysection{Gauss\+\_\+\+Hermite Class Reference}
+\label{classGauss__Hermite}\index{Gauss\_Hermite@{Gauss\_Hermite}}
+
+
+{\ttfamily \#include $<$gauss\+\_\+hermite.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+arma\+::rowvec \mbox{\hyperlink{classGauss__Hermite_a6ca475c04b0025a25e318b5a1a235c47}{nodes}} (unsigned int polynomial\+\_\+degree)
+\item 
+double \mbox{\hyperlink{classGauss__Hermite_a92328c97d4fd4e45834496b3eb00d6ce}{quadrature}} (arma\+::rowvec function\+\_\+values)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const arma\+::rowvec \mbox{\hyperlink{classGauss__Hermite_ad4207e2cab3adb9107bcbcfebf90c24f}{range4}}
+\item 
+static const arma\+::rowvec \mbox{\hyperlink{classGauss__Hermite_a4be35d0d8a5015b6fb5095080b4a5b3e}{range16}}
+\item 
+static const arma\+::rowvec \mbox{\hyperlink{classGauss__Hermite_a29b30991b23cb2ace933fbc5aaf0f860}{range64}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const arma\+::rowvec \mbox{\hyperlink{classGauss__Hermite_aa97ef382c80845f4ee19584502273f2e}{weights4}}
+\item 
+static const arma\+::rowvec \mbox{\hyperlink{classGauss__Hermite_a4feb569f2889bfe0ebc305e387b3b75f}{weights16}}
+\item 
+static const arma\+::rowvec \mbox{\hyperlink{classGauss__Hermite_a3be4bdf43abbad46107e0500aeb39eb6}{weights64}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGauss__Hermite_a6ca475c04b0025a25e318b5a1a235c47}\label{classGauss__Hermite_a6ca475c04b0025a25e318b5a1a235c47}} 
+\index{Gauss\_Hermite@{Gauss\_Hermite}!nodes@{nodes}}
+\index{nodes@{nodes}!Gauss\_Hermite@{Gauss\_Hermite}}
+\doxysubsubsection{\texorpdfstring{nodes()}{nodes()}}
+{\footnotesize\ttfamily arma\+::rowvec Gauss\+\_\+\+Hermite\+::nodes (\begin{DoxyParamCaption}\item[{unsigned int}]{polynomial\+\_\+degree }\end{DoxyParamCaption})}
+
+A function that returns a range of nodes that a polynomial function has to be evaluated on in order to compute the integral of the product of this function with exp(-\/x$^\wedge$2) (exact computations up to degree 127)
+
+
+\begin{DoxyParams}{Parameters}
+{\em polynomial\+\_\+degree} & the degree of the polynomial you want to evaluate the Gaussian-\/weighted integral on, any number above it works too \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A range of nodes to evaluate your function on 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGauss__Hermite_a92328c97d4fd4e45834496b3eb00d6ce}\label{classGauss__Hermite_a92328c97d4fd4e45834496b3eb00d6ce}} 
+\index{Gauss\_Hermite@{Gauss\_Hermite}!quadrature@{quadrature}}
+\index{quadrature@{quadrature}!Gauss\_Hermite@{Gauss\_Hermite}}
+\doxysubsubsection{\texorpdfstring{quadrature()}{quadrature()}}
+{\footnotesize\ttfamily double Gauss\+\_\+\+Hermite\+::quadrature (\begin{DoxyParamCaption}\item[{arma\+::rowvec}]{function\+\_\+values }\end{DoxyParamCaption})}
+
+A function that returns an approximation (or exact value for a polynomial) of the integral of the product of a function with exp(-\/x$^\wedge$2)
+
+
+\begin{DoxyParams}{Parameters}
+{\em function\+\_\+values} & images by the function of the range of nodes, must contain either 4, 16 or 64 elements \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+approximation of the integral 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGauss__Hermite_a4be35d0d8a5015b6fb5095080b4a5b3e}\label{classGauss__Hermite_a4be35d0d8a5015b6fb5095080b4a5b3e}} 
+\index{Gauss\_Hermite@{Gauss\_Hermite}!range16@{range16}}
+\index{range16@{range16}!Gauss\_Hermite@{Gauss\_Hermite}}
+\doxysubsubsection{\texorpdfstring{range16}{range16}}
+{\footnotesize\ttfamily const arma\+::rowvec Gauss\+\_\+\+Hermite\+::range16\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classGauss__Hermite_ad4207e2cab3adb9107bcbcfebf90c24f}\label{classGauss__Hermite_ad4207e2cab3adb9107bcbcfebf90c24f}} 
+\index{Gauss\_Hermite@{Gauss\_Hermite}!range4@{range4}}
+\index{range4@{range4}!Gauss\_Hermite@{Gauss\_Hermite}}
+\doxysubsubsection{\texorpdfstring{range4}{range4}}
+{\footnotesize\ttfamily const arma\+::rowvec Gauss\+\_\+\+Hermite\+::range4\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classGauss__Hermite_a29b30991b23cb2ace933fbc5aaf0f860}\label{classGauss__Hermite_a29b30991b23cb2ace933fbc5aaf0f860}} 
+\index{Gauss\_Hermite@{Gauss\_Hermite}!range64@{range64}}
+\index{range64@{range64}!Gauss\_Hermite@{Gauss\_Hermite}}
+\doxysubsubsection{\texorpdfstring{range64}{range64}}
+{\footnotesize\ttfamily const arma\+::rowvec Gauss\+\_\+\+Hermite\+::range64\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classGauss__Hermite_a4feb569f2889bfe0ebc305e387b3b75f}\label{classGauss__Hermite_a4feb569f2889bfe0ebc305e387b3b75f}} 
+\index{Gauss\_Hermite@{Gauss\_Hermite}!weights16@{weights16}}
+\index{weights16@{weights16}!Gauss\_Hermite@{Gauss\_Hermite}}
+\doxysubsubsection{\texorpdfstring{weights16}{weights16}}
+{\footnotesize\ttfamily const arma\+::rowvec Gauss\+\_\+\+Hermite\+::weights16\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classGauss__Hermite_aa97ef382c80845f4ee19584502273f2e}\label{classGauss__Hermite_aa97ef382c80845f4ee19584502273f2e}} 
+\index{Gauss\_Hermite@{Gauss\_Hermite}!weights4@{weights4}}
+\index{weights4@{weights4}!Gauss\_Hermite@{Gauss\_Hermite}}
+\doxysubsubsection{\texorpdfstring{weights4}{weights4}}
+{\footnotesize\ttfamily const arma\+::rowvec Gauss\+\_\+\+Hermite\+::weights4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classGauss__Hermite_a3be4bdf43abbad46107e0500aeb39eb6}\label{classGauss__Hermite_a3be4bdf43abbad46107e0500aeb39eb6}} 
+\index{Gauss\_Hermite@{Gauss\_Hermite}!weights64@{weights64}}
+\index{weights64@{weights64}!Gauss\_Hermite@{Gauss\_Hermite}}
+\doxysubsubsection{\texorpdfstring{weights64}{weights64}}
+{\footnotesize\ttfamily const arma\+::rowvec Gauss\+\_\+\+Hermite\+::weights64\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{gauss__hermite_8h}{gauss\+\_\+hermite.\+h}}\item 
+src/\mbox{\hyperlink{gauss__hermite_8cpp}{gauss\+\_\+hermite.\+cpp}}\end{DoxyCompactItemize}

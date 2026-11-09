@@ -1,0 +1,92 @@
+\hypertarget{classMyTest__Energy}{}\doxysection{My\+Test\+\_\+\+Energy Class Reference}
+\label{classMyTest__Energy}\index{MyTest\_Energy@{MyTest\_Energy}}
+
+
+{\ttfamily \#include $<$tests\+\_\+energy.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classMyTest__Energy_a8ff7ca1372aee9050fdc118e7603fa26}{calc\+\_\+energy}} (int n)
+\item 
+arma\+::rowvec \mbox{\hyperlink{classMyTest__Energy_a61798ffc5e7f536293445794efbf0965}{compute\+Derivative}} (const arma\+::rowvec points, double delta\+\_\+x)
+\item 
+arma\+::rowvec \mbox{\hyperlink{classMyTest__Energy_ab0250c5404360efedd5a113b0bd8b018}{schrodinger\+\_\+operator}} (const arma\+::rowvec points, const arma\+::rowvec abs)
+\item 
+arma\+::rowvec \mbox{\hyperlink{classMyTest__Energy_ab24fb818eb4f5117aec09ea703ece92e}{test\+\_\+energy\+\_\+equal}} (const arma\+::rowvec points, const arma\+::rowvec abs, int n)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMyTest__Energy_a8ff7ca1372aee9050fdc118e7603fa26}\label{classMyTest__Energy_a8ff7ca1372aee9050fdc118e7603fa26}} 
+\index{MyTest\_Energy@{MyTest\_Energy}!calc\_energy@{calc\_energy}}
+\index{calc\_energy@{calc\_energy}!MyTest\_Energy@{MyTest\_Energy}}
+\doxysubsubsection{\texorpdfstring{calc\_energy()}{calc\_energy()}}
+{\footnotesize\ttfamily double My\+Test\+\_\+\+Energy\+::calc\+\_\+energy (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classMyTest__Energy_a61798ffc5e7f536293445794efbf0965}\label{classMyTest__Energy_a61798ffc5e7f536293445794efbf0965}} 
+\index{MyTest\_Energy@{MyTest\_Energy}!computeDerivative@{computeDerivative}}
+\index{computeDerivative@{computeDerivative}!MyTest\_Energy@{MyTest\_Energy}}
+\doxysubsubsection{\texorpdfstring{computeDerivative()}{computeDerivative()}}
+{\footnotesize\ttfamily arma\+::rowvec My\+Test\+\_\+\+Energy\+::compute\+Derivative (\begin{DoxyParamCaption}\item[{const arma\+::rowvec}]{points,  }\item[{double}]{delta\+\_\+x }\end{DoxyParamCaption})}
+
+A function that derivates a row vector by a given value
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & The values of the function for specific points \\
+\hline
+{\em delta\+\_\+x} & The step between each point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+arma\+::rowvec Return a row vector containng the derivated value for each point of the vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMyTest__Energy_ab0250c5404360efedd5a113b0bd8b018}\label{classMyTest__Energy_ab0250c5404360efedd5a113b0bd8b018}} 
+\index{MyTest\_Energy@{MyTest\_Energy}!schrodinger\_operator@{schrodinger\_operator}}
+\index{schrodinger\_operator@{schrodinger\_operator}!MyTest\_Energy@{MyTest\_Energy}}
+\doxysubsubsection{\texorpdfstring{schrodinger\_operator()}{schrodinger\_operator()}}
+{\footnotesize\ttfamily arma\+::rowvec My\+Test\+\_\+\+Energy\+::schrodinger\+\_\+operator (\begin{DoxyParamCaption}\item[{const arma\+::rowvec}]{points,  }\item[{const arma\+::rowvec}]{abs }\end{DoxyParamCaption})}
+
+A fonction that calculates
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & \\
+\hline
+{\em abs} & \\
+\hline
+{\em delta\+\_\+x} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+arma\+::vec return 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMyTest__Energy_ab24fb818eb4f5117aec09ea703ece92e}\label{classMyTest__Energy_ab24fb818eb4f5117aec09ea703ece92e}} 
+\index{MyTest\_Energy@{MyTest\_Energy}!test\_energy\_equal@{test\_energy\_equal}}
+\index{test\_energy\_equal@{test\_energy\_equal}!MyTest\_Energy@{MyTest\_Energy}}
+\doxysubsubsection{\texorpdfstring{test\_energy\_equal()}{test\_energy\_equal()}}
+{\footnotesize\ttfamily arma\+::rowvec My\+Test\+\_\+\+Energy\+::test\+\_\+energy\+\_\+equal (\begin{DoxyParamCaption}\item[{const arma\+::rowvec}]{points,  }\item[{const arma\+::rowvec}]{abs,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+The function to test if the theorical function respects the Schrodinger equation
+
+
+\begin{DoxyParams}{Parameters}
+{\em abs} & the absiss points \\
+\hline
+{\em points} & the values of the theorical function \\
+\hline
+{\em n} & the level of energy \\
+\hline
+{\em delta\+\_\+x} & The step between each point\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector containing the distance to the operator and the formula of the energy 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{tests__energy_8h}{tests\+\_\+energy.\+h}}\item 
+src/\mbox{\hyperlink{tests__energy_8cpp}{tests\+\_\+energy.\+cpp}}\end{DoxyCompactItemize}

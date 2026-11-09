@@ -1,0 +1,33 @@
+\hypertarget{psi__compute_8h_source}{}\doxysection{psi\+\_\+compute.\+h}
+\label{psi__compute_8h_source}\index{headers/psi\_compute.h@{headers/psi\_compute.h}}
+\mbox{\hyperlink{psi__compute_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PSI\_COMPUTE}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PSI\_COMPUTE}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{hermite__compute_8h}{hermite\_compute.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{classPsi__compute}{Psi\_compute}} \{}
+\DoxyCodeLine{7     \textcolor{keyword}{private}:}
+\DoxyCodeLine{8     \textcolor{keywordtype}{double} \mbox{\hyperlink{classPsi__compute_aa29fbf01fdc232bb22e6c424960b9105}{m}};}
+\DoxyCodeLine{9     \textcolor{keywordtype}{double} \mbox{\hyperlink{classPsi__compute_aa87c2f3dab64dfcfc87ef1e70d867b5f}{omega}};}
+\DoxyCodeLine{10     \textcolor{keywordtype}{double} \mbox{\hyperlink{classPsi__compute_ac06e12eedb28e8ff8edfb75405e4d4f4}{some\_constant}};}
+\DoxyCodeLine{11     arma::rowvec \mbox{\hyperlink{classPsi__compute_a5e64ba44289ab9060beff915f4ecb008}{gaussian}};}
+\DoxyCodeLine{12     \mbox{\hyperlink{classHermite__compute}{Hermite\_compute}} \mbox{\hyperlink{classPsi__compute_acc4ce2f08a06f011a2d744ac6d8d0249}{hermite\_polynomials}};}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     arma::rowvec \mbox{\hyperlink{classPsi__compute_a92d876e510926c1b16ff7d790677196f}{range}};}
+\DoxyCodeLine{16     arma::mat \mbox{\hyperlink{classPsi__compute_ac1f7aa9174c9c79910f861067a0b6ee3}{values}};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{24     \mbox{\hyperlink{classPsi__compute_adee0fd77d94dea113ed937fc79e1e7f6}{Psi\_compute}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{classPsi__compute_aa29fbf01fdc232bb22e6c424960b9105}{m}}, \textcolor{keywordtype}{double} \mbox{\hyperlink{classPsi__compute_aa87c2f3dab64dfcfc87ef1e70d867b5f}{omega}});}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPsi__compute_a4afa6230963fbc29d47c93473b8c4b80}{eval}}(arma::rowvec \mbox{\hyperlink{namespaceplot_af8aab06a27d88dbc584ff449512c109c}{x}}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{49     arma::mat \mbox{\hyperlink{classPsi__compute_a55bca036b858de6226c57223b9ec894d}{compute\_psi\_0\_to\_n}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n, \textcolor{keywordtype}{double} inf, \textcolor{keywordtype}{double} sup, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n\_points);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{double} \mbox{\hyperlink{classPsi__compute_ae327c3b52563de729d094fcf258917e6}{inner\_product}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classPsi__compute_aa29fbf01fdc232bb22e6c424960b9105}{m}});}
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

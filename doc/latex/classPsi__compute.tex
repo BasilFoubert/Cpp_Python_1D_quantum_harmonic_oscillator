@@ -1,0 +1,166 @@
+\hypertarget{classPsi__compute}{}\doxysection{Psi\+\_\+compute Class Reference}
+\label{classPsi__compute}\index{Psi\_compute@{Psi\_compute}}
+
+
+{\ttfamily \#include $<$psi\+\_\+compute.\+h$>$}
+
+
+
+Collaboration diagram for Psi\+\_\+compute\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classPsi__compute__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPsi__compute_adee0fd77d94dea113ed937fc79e1e7f6}{Psi\+\_\+compute}} (double \mbox{\hyperlink{classPsi__compute_aa29fbf01fdc232bb22e6c424960b9105}{m}}, double \mbox{\hyperlink{classPsi__compute_aa87c2f3dab64dfcfc87ef1e70d867b5f}{omega}})
+\item 
+void \mbox{\hyperlink{classPsi__compute_a4afa6230963fbc29d47c93473b8c4b80}{eval}} (arma\+::rowvec x, unsigned int n)
+\item 
+arma\+::mat \mbox{\hyperlink{classPsi__compute_a55bca036b858de6226c57223b9ec894d}{compute\+\_\+psi\+\_\+0\+\_\+to\+\_\+n}} (unsigned int n, double inf, double sup, unsigned int n\+\_\+points)
+\item 
+double \mbox{\hyperlink{classPsi__compute_ae327c3b52563de729d094fcf258917e6}{inner\+\_\+product}} (unsigned int n, unsigned int \mbox{\hyperlink{classPsi__compute_aa29fbf01fdc232bb22e6c424960b9105}{m}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+arma\+::rowvec \mbox{\hyperlink{classPsi__compute_a92d876e510926c1b16ff7d790677196f}{range}}
+\item 
+arma\+::mat \mbox{\hyperlink{classPsi__compute_ac1f7aa9174c9c79910f861067a0b6ee3}{values}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classPsi__compute_aa29fbf01fdc232bb22e6c424960b9105}{m}}
+\item 
+double \mbox{\hyperlink{classPsi__compute_aa87c2f3dab64dfcfc87ef1e70d867b5f}{omega}}
+\item 
+double \mbox{\hyperlink{classPsi__compute_ac06e12eedb28e8ff8edfb75405e4d4f4}{some\+\_\+constant}}
+\item 
+arma\+::rowvec \mbox{\hyperlink{classPsi__compute_a5e64ba44289ab9060beff915f4ecb008}{gaussian}}
+\item 
+\mbox{\hyperlink{classHermite__compute}{Hermite\+\_\+compute}} \mbox{\hyperlink{classPsi__compute_acc4ce2f08a06f011a2d744ac6d8d0249}{hermite\+\_\+polynomials}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPsi__compute_adee0fd77d94dea113ed937fc79e1e7f6}\label{classPsi__compute_adee0fd77d94dea113ed937fc79e1e7f6}} 
+\index{Psi\_compute@{Psi\_compute}!Psi\_compute@{Psi\_compute}}
+\index{Psi\_compute@{Psi\_compute}!Psi\_compute@{Psi\_compute}}
+\doxysubsubsection{\texorpdfstring{Psi\_compute()}{Psi\_compute()}}
+{\footnotesize\ttfamily Psi\+\_\+compute\+::\+Psi\+\_\+compute (\begin{DoxyParamCaption}\item[{double}]{m,  }\item[{double}]{omega }\end{DoxyParamCaption})}
+
+A constructor taking the mass of the particle and the angular velocity of the HO
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the mass \\
+\hline
+{\em omega} & the angular velocity \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPsi__compute_a55bca036b858de6226c57223b9ec894d}\label{classPsi__compute_a55bca036b858de6226c57223b9ec894d}} 
+\index{Psi\_compute@{Psi\_compute}!compute\_psi\_0\_to\_n@{compute\_psi\_0\_to\_n}}
+\index{compute\_psi\_0\_to\_n@{compute\_psi\_0\_to\_n}!Psi\_compute@{Psi\_compute}}
+\doxysubsubsection{\texorpdfstring{compute\_psi\_0\_to\_n()}{compute\_psi\_0\_to\_n()}}
+{\footnotesize\ttfamily arma\+::mat Psi\+\_\+compute\+::compute\+\_\+psi\+\_\+0\+\_\+to\+\_\+n (\begin{DoxyParamCaption}\item[{unsigned int}]{n,  }\item[{double}]{inf,  }\item[{double}]{sup,  }\item[{unsigned int}]{n\+\_\+points }\end{DoxyParamCaption})}
+
+A function to compute solutions of the 1D-\/\+HO Schrödinger equation
+
+this function computes all of the solutions psi\+\_\+i with i ranging from 0 to n over an interval
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The function computes n+1 solutions, from psi\+\_\+0 to psi\+\_\+n, n must be greater or equal ot zero \\
+\hline
+{\em inf} & The lower bound of the interval you wish to compute the solutions over \\
+\hline
+{\em sup} & The upper bound of the interval you wish to compute the solutions over \\
+\hline
+{\em n\+\_\+points} & The number of points on the interval you wish to compute the solutions over (evenly spaced points), must be greater or equal to 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A matrix with n+2 rows and n\+\_\+points columns \+: row 0 is the interval, rows 1 to n+1 are the values of psi\+\_\+0, ..., psi\+\_\+n over this interval 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPsi__compute_a4afa6230963fbc29d47c93473b8c4b80}\label{classPsi__compute_a4afa6230963fbc29d47c93473b8c4b80}} 
+\index{Psi\_compute@{Psi\_compute}!eval@{eval}}
+\index{eval@{eval}!Psi\_compute@{Psi\_compute}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}}
+{\footnotesize\ttfamily void Psi\+\_\+compute\+::eval (\begin{DoxyParamCaption}\item[{arma\+::rowvec}]{x,  }\item[{unsigned int}]{n }\end{DoxyParamCaption})}
+
+A function to evaluate 1D-\/\+HO solutions of the Schrödinger equation
+
+this function computes all of the solutions psi\+\_\+i with i ranging from 0 to n over a range of values specified by the user and stores the range in the range attribute and the results in the values attribute
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The range of values you wish to evaluate Hermite polynomials over, specified as a row vector \\
+\hline
+{\em n} & The function evaluates n+1 polynomials, from H\+\_\+0 to H\+\_\+n\\
+\hline
+\end{DoxyParams}
+values is stored as a matrix with n+1 rows with the same size (i.\+e. same number of columns) as the input vector x \+: row i is H\+\_\+i evaluated at every point of the vector x, for all 0 \texorpdfstring{$<$}{<}= i \texorpdfstring{$<$}{<}= n \mbox{\Hypertarget{classPsi__compute_ae327c3b52563de729d094fcf258917e6}\label{classPsi__compute_ae327c3b52563de729d094fcf258917e6}} 
+\index{Psi\_compute@{Psi\_compute}!inner\_product@{inner\_product}}
+\index{inner\_product@{inner\_product}!Psi\_compute@{Psi\_compute}}
+\doxysubsubsection{\texorpdfstring{inner\_product()}{inner\_product()}}
+{\footnotesize\ttfamily double Psi\+\_\+compute\+::inner\+\_\+product (\begin{DoxyParamCaption}\item[{unsigned int}]{n,  }\item[{unsigned int}]{m }\end{DoxyParamCaption})}
+
+A function to compute the inner product of psi\+\_\+n and psi\+\_\+m, using the values of m and omega from the constructor 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classPsi__compute_a5e64ba44289ab9060beff915f4ecb008}\label{classPsi__compute_a5e64ba44289ab9060beff915f4ecb008}} 
+\index{Psi\_compute@{Psi\_compute}!gaussian@{gaussian}}
+\index{gaussian@{gaussian}!Psi\_compute@{Psi\_compute}}
+\doxysubsubsection{\texorpdfstring{gaussian}{gaussian}}
+{\footnotesize\ttfamily arma\+::rowvec Psi\+\_\+compute\+::gaussian\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPsi__compute_acc4ce2f08a06f011a2d744ac6d8d0249}\label{classPsi__compute_acc4ce2f08a06f011a2d744ac6d8d0249}} 
+\index{Psi\_compute@{Psi\_compute}!hermite\_polynomials@{hermite\_polynomials}}
+\index{hermite\_polynomials@{hermite\_polynomials}!Psi\_compute@{Psi\_compute}}
+\doxysubsubsection{\texorpdfstring{hermite\_polynomials}{hermite\_polynomials}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHermite__compute}{Hermite\+\_\+compute}} Psi\+\_\+compute\+::hermite\+\_\+polynomials\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPsi__compute_aa29fbf01fdc232bb22e6c424960b9105}\label{classPsi__compute_aa29fbf01fdc232bb22e6c424960b9105}} 
+\index{Psi\_compute@{Psi\_compute}!m@{m}}
+\index{m@{m}!Psi\_compute@{Psi\_compute}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily double Psi\+\_\+compute\+::m\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPsi__compute_aa87c2f3dab64dfcfc87ef1e70d867b5f}\label{classPsi__compute_aa87c2f3dab64dfcfc87ef1e70d867b5f}} 
+\index{Psi\_compute@{Psi\_compute}!omega@{omega}}
+\index{omega@{omega}!Psi\_compute@{Psi\_compute}}
+\doxysubsubsection{\texorpdfstring{omega}{omega}}
+{\footnotesize\ttfamily double Psi\+\_\+compute\+::omega\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPsi__compute_a92d876e510926c1b16ff7d790677196f}\label{classPsi__compute_a92d876e510926c1b16ff7d790677196f}} 
+\index{Psi\_compute@{Psi\_compute}!range@{range}}
+\index{range@{range}!Psi\_compute@{Psi\_compute}}
+\doxysubsubsection{\texorpdfstring{range}{range}}
+{\footnotesize\ttfamily arma\+::rowvec Psi\+\_\+compute\+::range}
+
+\mbox{\Hypertarget{classPsi__compute_ac06e12eedb28e8ff8edfb75405e4d4f4}\label{classPsi__compute_ac06e12eedb28e8ff8edfb75405e4d4f4}} 
+\index{Psi\_compute@{Psi\_compute}!some\_constant@{some\_constant}}
+\index{some\_constant@{some\_constant}!Psi\_compute@{Psi\_compute}}
+\doxysubsubsection{\texorpdfstring{some\_constant}{some\_constant}}
+{\footnotesize\ttfamily double Psi\+\_\+compute\+::some\+\_\+constant\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPsi__compute_ac1f7aa9174c9c79910f861067a0b6ee3}\label{classPsi__compute_ac1f7aa9174c9c79910f861067a0b6ee3}} 
+\index{Psi\_compute@{Psi\_compute}!values@{values}}
+\index{values@{values}!Psi\_compute@{Psi\_compute}}
+\doxysubsubsection{\texorpdfstring{values}{values}}
+{\footnotesize\ttfamily arma\+::mat Psi\+\_\+compute\+::values}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{psi__compute_8h}{psi\+\_\+compute.\+h}}\item 
+src/\mbox{\hyperlink{psi__compute_8cpp}{psi\+\_\+compute.\+cpp}}\end{DoxyCompactItemize}

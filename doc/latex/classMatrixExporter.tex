@@ -1,0 +1,93 @@
+\hypertarget{classMatrixExporter}{}\doxysection{Matrix\+Exporter Class Reference}
+\label{classMatrixExporter}\index{MatrixExporter@{MatrixExporter}}
+
+
+Provides utility to export Armadillo matrices to CSV files.  
+
+
+
+
+{\ttfamily \#include $<$matrix\+\_\+exporter.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6da}{Status}} \{ \mbox{\hyperlink{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6daa505a83f220c02df2f85c3810cd9ceb38}{Success}}
+, \mbox{\hyperlink{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6daae139a585510a502bbf1841cf589f5086}{Failure}}
+ \}
+\begin{DoxyCompactList}\small\item\em Indicates the outcome of the matrix save operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMatrixExporter_a658ceebb4c71170646eb2ddf5e055b83}{Matrix\+Exporter}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6da}{Status}} \mbox{\hyperlink{classMatrixExporter_ade701f03d9ffca38a94f6adf4558905c}{save\+To\+CSV}} (const arma\+::mat \&A, const std\+::string \&file\+Path=\char`\"{}output.\+csv\char`\"{})
+\begin{DoxyCompactList}\small\item\em Saves the given matrix to a CSV file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides utility to export Armadillo matrices to CSV files. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6da}\label{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6da}} 
+\index{MatrixExporter@{MatrixExporter}!Status@{Status}}
+\index{Status@{Status}!MatrixExporter@{MatrixExporter}}
+\doxysubsubsection{\texorpdfstring{Status}{Status}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6da}{Matrix\+Exporter\+::\+Status}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Indicates the outcome of the matrix save operation. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!MatrixExporter@{MatrixExporter}}\index{MatrixExporter@{MatrixExporter}!Success@{Success}}}\mbox{\Hypertarget{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6daa505a83f220c02df2f85c3810cd9ceb38}\label{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6daa505a83f220c02df2f85c3810cd9ceb38}} 
+Success&Indicates the matrix was successfully saved. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Failure@{Failure}!MatrixExporter@{MatrixExporter}}\index{MatrixExporter@{MatrixExporter}!Failure@{Failure}}}\mbox{\Hypertarget{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6daae139a585510a502bbf1841cf589f5086}\label{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6daae139a585510a502bbf1841cf589f5086}} 
+Failure&Indicates an error occurred during save operation. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMatrixExporter_a658ceebb4c71170646eb2ddf5e055b83}\label{classMatrixExporter_a658ceebb4c71170646eb2ddf5e055b83}} 
+\index{MatrixExporter@{MatrixExporter}!MatrixExporter@{MatrixExporter}}
+\index{MatrixExporter@{MatrixExporter}!MatrixExporter@{MatrixExporter}}
+\doxysubsubsection{\texorpdfstring{MatrixExporter()}{MatrixExporter()}}
+{\footnotesize\ttfamily Matrix\+Exporter\+::\+Matrix\+Exporter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+Additional initialization can be added if required in the future. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMatrixExporter_ade701f03d9ffca38a94f6adf4558905c}\label{classMatrixExporter_ade701f03d9ffca38a94f6adf4558905c}} 
+\index{MatrixExporter@{MatrixExporter}!saveToCSV@{saveToCSV}}
+\index{saveToCSV@{saveToCSV}!MatrixExporter@{MatrixExporter}}
+\doxysubsubsection{\texorpdfstring{saveToCSV()}{saveToCSV()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6da}{Matrix\+Exporter\+::\+Status}} Matrix\+Exporter\+::save\+To\+CSV (\begin{DoxyParamCaption}\item[{const arma\+::mat \&}]{A,  }\item[{const std\+::string \&}]{file\+Path = {\ttfamily \char`\"{}output.csv\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Saves the given matrix to a CSV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & The Armadillo matrix to be saved. \\
+\hline
+{\em file\+Path} & The path where the CSV file will be saved. Defaults to \char`\"{}output.\+csv\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6daa505a83f220c02df2f85c3810cd9ceb38}{Status\+::\+Success}} if the operation was successful, \mbox{\hyperlink{classMatrixExporter_ad9787cac26d3ed46cbdacbb0b429b6daae139a585510a502bbf1841cf589f5086}{Status\+::\+Failure}} otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{matrix__exporter_8h}{matrix\+\_\+exporter.\+h}}\item 
+src/\mbox{\hyperlink{matrix__exporter_8cpp}{matrix\+\_\+exporter.\+cpp}}\end{DoxyCompactItemize}

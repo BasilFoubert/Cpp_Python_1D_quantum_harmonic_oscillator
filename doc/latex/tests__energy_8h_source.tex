@@ -1,0 +1,18 @@
+\hypertarget{tests__energy_8h_source}{}\doxysection{tests\+\_\+energy.\+h}
+\label{tests__energy_8h_source}\index{headers/tests\_energy.h@{headers/tests\_energy.h}}
+\mbox{\hyperlink{tests__energy_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include "{}../tests/cxxtest/cxxtest/TestSuite.h"{}}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{matrix__exporter_8h}{matrix\_exporter.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <armadillo>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{classMyTest__Energy}{MyTest\_Energy}} \{}
+\DoxyCodeLine{7     \textcolor{keyword}{public}:}
+\DoxyCodeLine{8         \textcolor{keywordtype}{double} \mbox{\hyperlink{classMyTest__Energy_a8ff7ca1372aee9050fdc118e7603fa26}{calc\_energy}}(\textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{9         arma::rowvec \mbox{\hyperlink{classMyTest__Energy_a61798ffc5e7f536293445794efbf0965}{computeDerivative}}(\textcolor{keyword}{const} arma::rowvec points, \textcolor{keywordtype}{double} delta\_x);}
+\DoxyCodeLine{10         arma::rowvec \mbox{\hyperlink{classMyTest__Energy_ab0250c5404360efedd5a113b0bd8b018}{schrodinger\_operator}} (\textcolor{keyword}{const} arma::rowvec points, \textcolor{keyword}{const} arma::rowvec abs); \textcolor{comment}{//operator linked to the schrodinger's equation}}
+\DoxyCodeLine{11         arma::rowvec \mbox{\hyperlink{classMyTest__Energy_ab24fb818eb4f5117aec09ea703ece92e}{test\_energy\_equal}}(\textcolor{keyword}{const} arma::rowvec points, \textcolor{keyword}{const} arma::rowvec abs, \textcolor{keywordtype}{int} n); \textcolor{comment}{//fonction qui prend en argument la fonction calc\_energy, un entier, une valeur, et vérifie à eps la valeur théorique à la valeur numérique}}
+\DoxyCodeLine{12 \};}
+
+\end{DoxyCode}
